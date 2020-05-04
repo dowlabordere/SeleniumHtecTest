@@ -15,6 +15,15 @@ After cloning project applications could be started in few ways:
 - there is also backup of scenarios.json file called scenariosBACKUP.json file
 - webdriver will be closed after test is done
 
+## Expected behaviour
+
+- There are 8 use cases written in sandbox application (number isn't hardcoded)
+- All of use cases will be copied to json file and then they will be deleted
+- From json file use cases will be recovered
+- Use cases will be edited with randomly selected string
+- Edited use cases will be then deleted (due to fact that every use case is edited then all use cases will be deleted)
+- Exit (driver.close())
+
 ## Built with
 
 - Java
