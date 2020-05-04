@@ -7,9 +7,8 @@ public class DashboardPage {
 
     @FindBy(xpath = "//h5[text()='Vladimir Jovanovic']")
     private WebElement profileCard;
-
     @FindBy(xpath = "//h5[text()='Use Cases']")
-    WebElement useCasesCard;
+    private WebElement useCasesCard;
 
     public void clickOnProfileCard(){
         profileCard.click();

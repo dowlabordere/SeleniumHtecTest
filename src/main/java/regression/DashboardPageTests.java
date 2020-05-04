@@ -2,16 +2,11 @@ package regression;
 
 import framework.Base;
 import framework.BrowserFactory;
-import org.junit.After;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pageobjects.DashboardPage;
-
-import java.util.concurrent.TimeUnit;
 
 public class DashboardPageTests {
 

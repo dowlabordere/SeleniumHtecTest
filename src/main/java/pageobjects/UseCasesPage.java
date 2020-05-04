@@ -6,11 +6,9 @@ import org.openqa.selenium.support.FindBy;
 public class UseCasesPage {
 
     @FindBy(xpath = "//div[@class='container']/div/a[1]")
-    WebElement backButton;
-
+    private WebElement backButton;
     @FindBy(xpath = "//div[@class='container']/div/a[2]")
-    WebElement createUseCaseButton;
-
+    private WebElement createUseCaseButton;
 
     public void backToDashboard(){
         backButton.click();

@@ -8,15 +8,15 @@ import java.util.List;
 public class EditUseCase {
 
     @FindBy(name = "title")
-    WebElement title;
+    private WebElement title;
     @FindBy(name = "description")
-    WebElement description;
+    private WebElement description;
     @FindBy(name = "expected_result")
-    WebElement expectedResult;
+    private WebElement expectedResult;
     @FindBy(id = "stepId")
-    List<WebElement> steps;
+    private List<WebElement> steps;
     @FindBy(xpath = "//button[text()='Submit']")
-    WebElement submit;
+    private WebElement submit;
 
     public WebElement getTitle() {
         return title;

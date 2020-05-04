@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97d07cfb-2e8c-4124-b2a8-9a7028a2050d" name="Default Changelist" comment="" />
+    <list default="true" id="97d07cfb-2e8c-4124-b2a8-9a7028a2050d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/featureFiles/Delete all use cases.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/EditUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/EditUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/UseCasesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/UseCasesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regression/DashboardPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/DashboardPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regression/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/HomePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regression/LoginPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/LoginPageTests.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

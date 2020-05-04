@@ -1,21 +1,16 @@
 package regression;
 
 import framework.BrowserFactory;
-import org.junit.After;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pageobjects.HomePage;
 
-import java.util.concurrent.TimeUnit;
-
 public class HomePageTests {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @Test
     public void goToLoginPage(){

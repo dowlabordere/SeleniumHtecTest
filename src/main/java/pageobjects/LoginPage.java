@@ -6,15 +6,11 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage {
 
     @FindBy(name = "email")
-    WebElement emailInputField;
-
+    private WebElement emailInputField;
     @FindBy(name = "password")
-    WebElement passwordInputField;
-
+    private WebElement passwordInputField;
     @FindBy(xpath = "//button[text()='Submit']")
-    WebElement submitButton;
-
-
+    private WebElement submitButton;
 
     public void clickOnSubmitButton(){
         submitButton.click();
