@@ -1,0 +1,12 @@
+framework\BrowserFactory.class
+pageobjects\HomePage.class
+pageobjects\UseCasesPage.class
+regression\HomePageTests.class
+regression\UseCasesPageTests.class
+pageobjects\LoginPage.class
+framework\Base.class
+pageobjects\DashboardPage.class
+framework\BasePage.class
+pageobjects\EditUseCase.class
+regression\LoginPageTests.class
+regression\DashboardPageTests.class
