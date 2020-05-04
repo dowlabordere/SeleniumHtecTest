@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97d07cfb-2e8c-4124-b2a8-9a7028a2050d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/featureFiles/Delete all use cases.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/EditUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/EditUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/UseCasesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/UseCasesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/regression/DashboardPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/DashboardPageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/regression/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/HomePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/regression/LoginPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/LoginPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randomString.txt" beforeDir="false" afterPath="$PROJECT_DIR$/randomString.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenariosBACKUP.json" beforeDir="false" afterPath="$PROJECT_DIR$/scenariosBACKUP.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SanboxQa-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SanboxQa-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/TestSuite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/Testing Sandbox Htec/Exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/Testing Sandbox Htec/Exam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/Testing Sandbox Htec/Exam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/Testing Sandbox Htec/Exam.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/junitreports/TEST-regression.UseCasesPageTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/junitreports/TEST-regression.UseCasesPageTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/old/Testing Sandbox Htec/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/old/Testing Sandbox Htec/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/old/Testing Sandbox Htec/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/old/Testing Sandbox Htec/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failsafe-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/failsafe-reports/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +100,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UseCasesPageTests.deleteAllUseCasesTestsAndWriteToJson" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SanboxQa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="regression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="regression" />
+      <option name="MAIN_CLASS_NAME" value="regression.UseCasesPageTests" />
+      <option name="METHOD_NAME" value="deleteAllUseCasesTestsAndWriteToJson" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UseCasesPageTests.editPropertiesToAllUseCases" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SanboxQa" />
       <extension name="coverage">
@@ -150,6 +175,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.UseCasesPageTests.readFromJsonAndWriteUseCasesOnUi" />
+        <item itemvalue="TestNG.UseCasesPageTests.deleteAllUseCasesTestsAndWriteToJson" />
         <item itemvalue="TestNG.UseCasesPageTests.deleteAllUseCasesTest" />
         <item itemvalue="TestNG.UseCasesPageTests.editPropertiesToAllUseCases" />
         <item itemvalue="TestNG.UseCasesPageTests.goToUseCasesTest" />
@@ -167,6 +193,14 @@
       <option name="presentableId" value="Default" />
       <updated>1588535199052</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changed use cases methods related to testng.xml">
+      <created>1588579723512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588579723512</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,11 +208,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed use cases methods related to testng.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed use cases methods related to testng.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Testing Sandbox Htec" duration-ms="88541" started-at="2020-05-04T00:58:30 CEST" finished-at="2020-05-04T00:59:59 CEST">
+  <suite name="Testing Sandbox Htec" duration-ms="139659" started-at="2020-05-04T21:31:13 CEST" finished-at="2020-05-04T21:33:33 CEST">
     <groups>
     </groups>
-    <test name="Exam" duration-ms="88541" started-at="2020-05-04T00:58:30 CEST" finished-at="2020-05-04T00:59:59 CEST">
+    <test name="Exam" duration-ms="139659" started-at="2020-05-04T21:31:13 CEST" finished-at="2020-05-04T21:33:33 CEST">
       <class name="regression.UseCasesPageTests">
-        <test-method status="PASS" signature="deleteAllUseCasesTestsAndWriteToJson()[pri:0, instance:regression.UseCasesPageTests@4f933fd1]" name="deleteAllUseCasesTestsAndWriteToJson" duration-ms="29770" started-at="2020-05-04T00:58:30 CEST" finished-at="2020-05-04T00:59:00 CEST">
+        <test-method status="PASS" signature="deleteAllUseCasesTestsAndWriteToJson()[pri:0, instance:regression.UseCasesPageTests@4f933fd1]" name="deleteAllUseCasesTestsAndWriteToJson" duration-ms="43821" started-at="2020-05-04T21:31:13 CEST" finished-at="2020-05-04T21:31:57 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllUseCasesTestsAndWriteToJson -->
-        <test-method status="PASS" signature="readFromJsonAndWriteUseCasesOnUi()[pri:1, instance:regression.UseCasesPageTests@4f933fd1]" name="readFromJsonAndWriteUseCasesOnUi" duration-ms="19587" started-at="2020-05-04T00:59:00 CEST" finished-at="2020-05-04T00:59:20 CEST">
+        <test-method status="PASS" signature="readFromJsonAndWriteUseCasesOnUi()[pri:1, instance:regression.UseCasesPageTests@4f933fd1]" name="readFromJsonAndWriteUseCasesOnUi" duration-ms="31938" started-at="2020-05-04T21:31:57 CEST" finished-at="2020-05-04T21:32:29 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFromJsonAndWriteUseCasesOnUi -->
-        <test-method status="PASS" signature="editPropertiesToAllUseCases()[pri:2, instance:regression.UseCasesPageTests@4f933fd1]" name="editPropertiesToAllUseCases" duration-ms="27941" started-at="2020-05-04T00:59:20 CEST" finished-at="2020-05-04T00:59:48 CEST">
+        <test-method status="PASS" signature="editPropertiesToAllUseCases()[pri:2, instance:regression.UseCasesPageTests@4f933fd1]" name="editPropertiesToAllUseCases" duration-ms="45915" started-at="2020-05-04T21:32:29 CEST" finished-at="2020-05-04T21:33:15 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editPropertiesToAllUseCases -->
-        <test-method status="PASS" signature="deleteAllEditedUseCases()[pri:3, instance:regression.UseCasesPageTests@4f933fd1]" name="deleteAllEditedUseCases" duration-ms="11198" started-at="2020-05-04T00:59:48 CEST" finished-at="2020-05-04T00:59:59 CEST">
+        <test-method status="PASS" signature="deleteAllEditedUseCases()[pri:3, instance:regression.UseCasesPageTests@4f933fd1]" name="deleteAllEditedUseCases" duration-ms="17935" started-at="2020-05-04T21:33:15 CEST" finished-at="2020-05-04T21:33:33 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllEditedUseCases -->

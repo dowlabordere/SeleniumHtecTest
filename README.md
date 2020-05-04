@@ -17,7 +17,8 @@ After cloning project applications could be started in few ways:
 
 ## Expected behaviour
 
-- There are 8 use cases written in sandbox application (number isn't hardcoded)
+- There are 13 use cases written in sandbox application (8 of them are login use cases not automated 
+and 5 of them are related to exam and they are automated)
 - All of use cases will be copied to json file and then they will be deleted
 - From json file use cases will be recovered
 - Use cases will be edited with randomly selected string
