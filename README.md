@@ -2,7 +2,7 @@
 
 dowlabordere's app for testing Htec Sandbox Qa application
 
-## Getting Started
+## Getting Started and execute tests
 
 After cloning project applications could be started in few ways:
 - mvn clean install (will run methods from UseCasesPageTests class sorted by priority)
@@ -14,3 +14,10 @@ After cloning project applications could be started in few ways:
 - deleted use cases can be retrieved from scenarios.json file
 - there is also backup of scenarios.json file called scenariosBACKUP.json file
 - webdriver will be closed after test is done
+
+## Built with
+
+- Java
+- Selenium
+- Maven
+- TestNG
