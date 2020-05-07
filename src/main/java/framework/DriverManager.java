@@ -25,7 +25,6 @@ public class DriverManager {
 
     public static void close() {
         driver.quit();
-        driver = null;
     }
 
     public static void waitFor(long millis){

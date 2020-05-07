@@ -13,21 +13,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Metode {
+public final class Utils {
 
-    WebDriver driver;
-
-    public Metode(WebDriver driver) {
-        driver = this.driver;
+    private Utils() {
+        throw new IllegalStateException("Can't create instance of static util class");
     }
-
-    public List<String> getUseCaseNames() {
-        return useCaseNames;
-    }
-
-    private List<String> useCaseNames = new ArrayList<String>();
-    List<WebElement> listOfUseCases;
-    private JSONObject scenarioObject;
 
     public void catchUseCasesNames(WebDriver driver) {
         useCaseNames.clear();
@@ -38,6 +28,12 @@ public class Metode {
         }
         scenarioObject = new JSONObject();
     }
+
+    public List<String> getUseCaseNames() {
+        return useCaseNames;
+    }
+
+
 
     public void catchTestCasesNames() {
         catchUseCasesNames(driver);
