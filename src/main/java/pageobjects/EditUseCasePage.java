@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class EditUseCase {
+public class EditUseCasePage {
 
     @FindBy(name = "title")
     private WebElement title;
@@ -16,7 +16,7 @@ public class EditUseCase {
     @FindBy(id = "stepId")
     private List<WebElement> steps;
     @FindBy(xpath = "//button[text()='Submit']")
-    private WebElement submit;
+    private WebElement submitUseCase;
 
     public WebElement getTitle() {
         return title;
@@ -35,7 +35,7 @@ public class EditUseCase {
     }
 
     public void clickToSubmit() {
-        submit.click();
+        submitUseCase.click();
     }
 
 }

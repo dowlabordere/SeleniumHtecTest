@@ -1,7 +1,8 @@
 package regression;
 
+import common.Metode;
 import framework.Base;
-import framework.BrowserFactory;
+import framework.DriverManager;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,8 +11,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
-import pageobjects.EditUseCase;
+import org.testng.annotations.*;
+import pageobjects.EditUseCasePage;
 import pageobjects.UseCasesPage;
 
 import java.io.*;
@@ -28,12 +29,45 @@ public class UseCasesPageTests {
     private JSONObject scenarioObject;
     private String randomString;
 
+
+    @BeforeSuite
+    public void setupDriver(){ driver = DriverManager.getInstance(); }
+
+    @BeforeTest
+    public void goToPage(){ driver.get("https://qa-sandbox.apps.htec.rs/use-cases"); }
+
+    @AfterTest
+    public void clearBrowser(){ DriverManager.clearBrowserLogs(); }
+
+    @AfterSuite
+    public void closeBrowser(){ DriverManager.close(); }
+
+    @Test
+    public void deleteAllUseCasesTestsAndWriteToJson(){
+        UseCasesPage ucp = PageFactory.initElements(driver, UseCasesPage.class);
+        Base.waitForElementToAppear(driver, ucp.getCreateUseCaseButton(),5);
+        Base.waitForElementToAppear(driver, ucp.getBackButton(),5);
+        Metode metode = new Metode(driver);
+        metode.catchTestCasesNames();
+        metode.writeScenariosToJson();
+        metode.catchUseCasesNames(driver);
+        EditUseCasePage eucp = PageFactory.initElements(driver, EditUseCasePage.class);
+        for (int i = 0; i < metode.getUseCaseNames().size(); i++) {
+            driver.findElement(By.xpath("//a[text()='" + metode.getUseCaseNames().get(i) + "']")).click();
+            Base.waitForElementToAppear(driver, By.xpath("//b[text()=' Edit Use Case']"), 5);
+            driver.findElement(By.xpath("//i[contains(@class,'fa-trash-alt')]/parent::button")).click();
+            Base.waitForElementToAppear(driver, By.xpath("//button[text()='Delete']"), 5);
+            driver.findElement(By.xpath("//button[text()='Delete']")).click();
+            Base.waitForElementToAppear(driver, By.xpath("//b[text()='Use Cases']"), 5);
+        }
+    }
+
     // Delete all test cases with writing them to txt file
     @Test(priority = 0)
-    public void deleteAllUseCasesTestsAndWriteToJson() {
-        goToUseCasesList();
-        catchTestCases();
-        writeScenarioToJson();
+    public void SSSdeleteAllUseCasesTestsAndWriteToJson() {
+//        goToUseCasesList();
+//        catchTestCasesNames();
+//        writeScenarioToJson();
         deleteAllTestCases();
     }
 
@@ -81,7 +115,7 @@ public class UseCasesPageTests {
 //    @Test
     public void catchAllUseCasesToJson() {
         goToUseCasesList();
-        catchTestCases();
+//        catchTestCases();
         writeScenarioToJson();
         readFromJson();
     }
@@ -125,7 +159,7 @@ public class UseCasesPageTests {
             Base.waitForElementToAppear(driver, By.xpath("//a[text()='" + useCaseNames.get(i) + "']"), 5);
             driver.findElement(By.xpath("//a[text()='" + useCaseNames.get(i) + "']")).click();
             Base.waitForElementToAppear(driver, By.xpath("//b[text()=' Edit Use Case']"), 5);
-            EditUseCase euc = PageFactory.initElements(driver, EditUseCase.class);
+            EditUseCasePage euc = PageFactory.initElements(driver, EditUseCasePage.class);
             editProperty(euc.getTitle());
             editProperty(euc.getDescription());
             editProperty(euc.getExpectedResult());
@@ -178,12 +212,12 @@ public class UseCasesPageTests {
 
     // Will go to use cases list
     private void goToUseCasesList() {
-        DashboardPageTests dpt = new DashboardPageTests();
-        dpt.useCasesCard();
-        driver = BrowserFactory.startBrowser("chrome");
-        Base.waitForElementToAppear(driver, By.xpath("//a[text()='CREATE USE CASE']"), 5);
-        UseCasesPage ucp = PageFactory.initElements(driver, UseCasesPage.class);
-        Base.waitForElementToAppear(driver, By.xpath("//b[text()='Use Cases']"), 5);
+//        DashboardPageTests dpt = new DashboardPageTests();
+//        dpt.useCasesCard();
+//        driver = DriverManager.getInstance();
+//        Base.waitForElementToAppear(driver, By.xpath("//a[text()='CREATE USE CASE']"), 5);
+//        UseCasesPage ucp = PageFactory.initElements(driver, UseCasesPage.class);
+//        Base.waitForElementToAppear(driver, By.xpath("//b[text()='Use Cases']"), 5);
     }
 
     // Will catch use cases names
@@ -219,7 +253,7 @@ public class UseCasesPageTests {
     }
 
     // Will take all of properties inside use cases
-    private void catchTestCases() {
+    private void catchTestCasesNames() {
         catchUseCasesNames();
         scenarioObject = new JSONObject();
         for (int i = 0; i < useCaseNames.size(); i++) {
@@ -297,7 +331,7 @@ public class UseCasesPageTests {
     // Will write use case on UI
     private void writeToUi() {
         UseCasesPage ucp = PageFactory.initElements(driver, UseCasesPage.class);
-        EditUseCase euc = PageFactory.initElements(driver, EditUseCase.class);
+        EditUseCasePage euc = PageFactory.initElements(driver, EditUseCasePage.class);
         for (int i = 0; i < scenarioObjects.size(); i++) {
             scenarioObject = scenarioObjects.get(i);
             Base.waitForElementToAppear(driver, By.xpath("//div[@class='container']/div/a[2]"), 5);

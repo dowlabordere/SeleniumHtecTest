@@ -11,11 +11,14 @@ public class UseCasesPage {
     private WebElement createUseCaseButton;
 
     public void backToDashboard(){
-        backButton.click();
+        getBackButton().click();
     }
 
     public void createUseCase(){
-        createUseCaseButton.click();
+        getCreateUseCaseButton().click();
     }
 
+    public WebElement getBackButton() { return backButton; }
+
+    public WebElement getCreateUseCaseButton() { return createUseCaseButton; }
 }

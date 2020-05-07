@@ -10,10 +10,10 @@ public class LoginPage {
     @FindBy(name = "password")
     private WebElement passwordInputField;
     @FindBy(xpath = "//button[text()='Submit']")
-    private WebElement submitButton;
+    private WebElement submitLogin;
 
     public void clickOnSubmitButton(){
-        submitButton.click();
+        submitLogin.click();
     }
 
     public void insertUsername(String email){
