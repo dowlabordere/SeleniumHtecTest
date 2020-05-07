@@ -1,11 +1,7 @@
 package regression;
 
-import framework.Base;
 import framework.DriverManager;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,19 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pageobjects.*;
-import sun.rmi.runtime.Log;
 import utils.Utils;
-
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 
 public class UseCasesPageTests {
 
     private WebDriver driver;
-
 
     @BeforeTest
     public void init(){
@@ -44,7 +35,8 @@ public class UseCasesPageTests {
 
     public void writesScenariosToFile() throws InterruptedException, IOException {
 
-        List<WebElement>listOfUseCases = driver.findElements(By.xpath("//div[contains(@class,'list-group')]//a"));
+        UseCasesPage ucp = PageFactory.initElements(driver, UseCasesPage.class);
+        List<WebElement>listOfUseCases = ucp.getUseCaseElements();
         List<String> useCaseNames = Utils.getElementNames(listOfUseCases);
         Assert.assertFalse(useCaseNames.isEmpty());
         List<JSONObject> scenarios = new ArrayList<>();
@@ -52,17 +44,18 @@ public class UseCasesPageTests {
         for (String name : useCaseNames) {
             JSONObject json = new JSONObject();
             driver.findElement(By.xpath("//a[text()='" + name+ "']")).click();
-            Utils.populateObject(json, "title", driver.findElement(By.name("title")).getAttribute("value"));
-            Utils.populateObject(json, "description", driver.findElement(By.name("description")).getText());
-            Utils.populateObject(json, "expected result", driver.findElement(By.name("expected_result")).getAttribute("value"));
+            Utils.populateObject(json, "title", ucp.getUseCaseTitle().getAttribute("value"));
+            Utils.populateObject(json, "description", ucp.getUseCaseDescription().getText());
+            Utils.populateObject(json, "expected result", ucp.getUseCaseExpRes().getAttribute("value"));
 
-            List<WebElement> steps = driver.findElements(By.id("stepId"));
+            List<WebElement> steps = ucp.getUseCaseStepElements();
             List<String> stepsStrings = new ArrayList<>();
             for (WebElement step : steps) {
                 stepsStrings.add(step.getAttribute("value"));
             }
             Utils.populateObject(json, "steps", stepsStrings);
-            driver.findElement(By.xpath("//a[@href='/use-cases']")).click();
+            EditUseCasePage eucp = PageFactory.initElements(driver, EditUseCasePage.class);
+            eucp.backToDashboard();
             scenarios.add(json);
         }
         Utils.writeScenariosToFile(scenarios);
@@ -71,14 +64,16 @@ public class UseCasesPageTests {
 
     @Test
     public void deleteAllUseCases() throws IOException, InterruptedException {
-        // komentar zasto koji kurac ovo radim
+        // The method is called for writing scenarios to file before deleting them
         writesScenariosToFile();
-        List<WebElement>listOfUseCases = driver.findElements(By.xpath("//div[contains(@class,'list-group')]//a"));
+        List<WebElement>listOfUseCases = PageFactory.initElements(driver, UseCasesPage.class).getUseCaseElements();
         List<String> useCaseNames = Utils.getElementNames(listOfUseCases);
         Assert.assertFalse(useCaseNames.isEmpty());
         for (String name : useCaseNames) {
             driver.findElement(By.xpath("//a[text()='" + name+ "']")).click();
-            driver.findElement(By.xpath("//a[@href='/use-cases']")).click();
+            EditUseCasePage eucp = PageFactory.initElements(driver, EditUseCasePage.class);
+            eucp.clickDeleteButton();
+            eucp.deleteScenario();
         }
     }
 //    @Test

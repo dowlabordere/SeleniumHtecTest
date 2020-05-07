@@ -1,13 +1,5 @@
 package regression;
 
-import framework.Base;
-import framework.DriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
-import pageobjects.LoginPage;
-
 public class LoginPageTests {
 
 //    private WebDriver driver;

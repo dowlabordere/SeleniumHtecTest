@@ -1,13 +1,7 @@
 package utils;
 
-import framework.Base;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,17 +22,6 @@ public final class Utils {
         return names;
     }
 
-//    public static void waitForElementToAppear(WebDriver driver, WebElement locator, int seconds){
-//        WebDriverWait wait =  new WebDriverWait(driver, seconds);
-//        wait.until(ExpectedConditions.visibilityOf(locator));
-//    }
-//
-//    public static void waitForElementToAppear(WebDriver driver, By locator, int seconds){
-//        WebDriverWait wait =  new WebDriverWait(driver, seconds);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-//    }
-
-
     public static void writeScenariosToFile(List<JSONObject> scenarios) throws IOException {
         FileWriter fw = null;
         try {
@@ -56,5 +39,4 @@ public final class Utils {
         json.put(key, value);
         return json;
     }
-
 }

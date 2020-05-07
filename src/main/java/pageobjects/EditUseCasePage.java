@@ -17,25 +17,30 @@ public class EditUseCasePage {
     private List<WebElement> steps;
     @FindBy(xpath = "//button[text()='Submit']")
     private WebElement submitUseCase;
+    @FindBy(xpath = "//a[@href='/use-cases']")
+    private WebElement backButton;
+    @FindBy(xpath = "//span[contains(@class,'delete-button')]//button")
+    private WebElement deleteButton;
+    @FindBy(xpath = "//button[text()='Delete']")
+    private WebElement deleteScenario;
 
     public WebElement getTitle() {
         return title;
     }
-
     public WebElement getDescription() {
         return description;
     }
-
     public WebElement getExpectedResult() {
         return expectedResult;
     }
-
     public List getSteps() {
         return steps;
     }
-
     public void clickToSubmit() {
         submitUseCase.click();
     }
+    public void backToDashboard(){ backButton.click(); }
+    public void clickDeleteButton(){ deleteButton.click(); }
+    public void deleteScenario(){ deleteScenario.click(); }
 
 }
