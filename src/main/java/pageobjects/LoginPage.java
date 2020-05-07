@@ -5,6 +5,18 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
+    public WebElement getEmailInputField() {
+        return emailInputField;
+    }
+
+    public WebElement getPasswordInputField() {
+        return passwordInputField;
+    }
+
+    public WebElement getSubmitLogin() {
+        return submitLogin;
+    }
+
     @FindBy(name = "email")
     private WebElement emailInputField;
     @FindBy(name = "password")
