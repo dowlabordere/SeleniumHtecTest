@@ -15,13 +15,14 @@ public class DriverManager {
         if(driver==null){
             ChromeOptions chromeOptions = new ChromeOptions();
             if(!System.getProperty("os.name").contains("Windows")){
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriverLNX");
             } else System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
             chromeOptions.addArguments("--start-maximized");
             driver = new ChromeDriver(chromeOptions);
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
             return driver;
+
         } return driver;
     }
 
