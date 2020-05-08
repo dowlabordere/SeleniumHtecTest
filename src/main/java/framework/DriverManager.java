@@ -11,6 +11,7 @@ public class DriverManager {
     private static WebDriver driver;
 
     public static WebDriver init() {
+
         if(driver==null){
             ChromeOptions chromeOptions = new ChromeOptions();
             if(!System.getProperty("os.name").contains("Windows")){
