@@ -24,7 +24,8 @@ public class DriverManager {
     }
 
     public static void close() {
-        driver.quit();
+        driver.close();
+        driver = null;
     }
 
     public static void clearBrowserLogs() {

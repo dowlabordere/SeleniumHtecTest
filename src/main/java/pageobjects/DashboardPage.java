@@ -17,18 +17,11 @@ public class DashboardPage {
     private WebElement profileCard;
     @FindBy(xpath = "//h5[text()='Use Cases']")
     private WebElement useCasesCard;
-//    @FindBy(xpath = "//h5[text()='Vladimir Jovanovic']")
-//    private WebElement profileCard;
-//    @FindBy(xpath = "//a[@href()='/use-cases']")
-//    private WebElement useCasesCard;
 
     public void clickOnProfileCard(){
         profileCard.click();
     }
-
-    public void clickOnUseCasesCard(){
-        useCasesCard.click();
-    }
+    public void clickOnUseCasesCard(){ useCasesCard.click(); }
 
 
 }

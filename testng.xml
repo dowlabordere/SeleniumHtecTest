@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Testing Sandbox Htec">
-    <test name="Exam">
+    <test name="deleteAllUseCases">
         <classes>
-            <class name="regression.UseCasesPageTests"/>
+            <class name="regression.UseCasesPageTests">
+                <methods>
+                    <include name="deleteAllUseCases"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="recreateDeletedUseCases">
+        <classes>
+            <class name="regression.UseCasesPageTests">
+                <methods>
+                    <include name="recreateDeletedUseCases"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="changeUseCases">
+        <classes>
+            <class name="regression.UseCasesPageTests">
+                <methods>
+                    <include name="changeUseCases"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="deleteChangedUseCases">
+        <classes>
+            <class name="regression.UseCasesPageTests">
+                <methods>
+                    <include name="deleteChangedUseCases"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
