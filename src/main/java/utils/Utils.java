@@ -40,12 +40,12 @@ public final class Utils {
             fw.flush();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             fw.close();
         }
     }
 
-    public static JSONObject populateObject(JSONObject json, String key, Object value){
+    public static JSONObject populateObject(JSONObject json, String key, Object value) {
         json.put(key, value);
         return json;
     }
@@ -73,7 +73,7 @@ public final class Utils {
         writeRandomStringToFile(randomString.toString());
     }
 
-    public static void writeRandomStringToFile(String randomString){
+    public static void writeRandomStringToFile(String randomString) {
         try (FileWriter file = new FileWriter("randomString.txt")) {
             file.write(randomString);
             file.flush();
@@ -82,7 +82,7 @@ public final class Utils {
         }
     }
 
-    public static String getMemorizedRandomString(){
+    public static String getMemorizedRandomString() {
         File file = new File("randomString.txt");
         String randomString = null;
         if (file.exists()) {
@@ -102,14 +102,14 @@ public final class Utils {
 
     public static void writesScenariosToFile(WebDriver driver) throws InterruptedException, IOException {
         UseCasesPage ucp = PageFactory.initElements(driver, UseCasesPage.class);
-        List<WebElement>listOfUseCases = ucp.getUseCaseElements();
+        List<WebElement> listOfUseCases = ucp.getUseCaseElements();
         List<String> useCaseNames = Utils.getElementNames(listOfUseCases);
         Assert.assertFalse(useCaseNames.isEmpty());
         List<JSONObject> scenarios = new ArrayList<>();
 
         for (String name : useCaseNames) {
             JSONObject json = new JSONObject();
-            driver.findElement(By.xpath("//a[text()='" + name+ "']")).click();
+            driver.findElement(By.xpath("//a[text()='" + name + "']")).click();
             EditUseCasePage eucp = PageFactory.initElements(driver, EditUseCasePage.class);
             Utils.populateObject(json, "title", eucp.getUseCaseTitle().getAttribute("value"));
             Utils.populateObject(json, "description", eucp.getUseCaseDescription().getText());

@@ -1,11 +1,7 @@
 package pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
-import utils.Utils;
 
 import java.util.List;
 
@@ -19,16 +15,24 @@ public class UseCasesPage {
     private List<WebElement> useCaseElements;
 
 
+    public List<WebElement> getUseCaseElements() {
+        return useCaseElements;
+    }
 
-    public List<WebElement> getUseCaseElements() { return useCaseElements; }
-    public WebElement getBackButton() { return backButton; }
-    public WebElement getCreateUseCaseButton() { return createUseCaseButton; }
-    public void backToDashboard(){
+    public WebElement getBackButton() {
+        return backButton;
+    }
+
+    public WebElement getCreateUseCaseButton() {
+        return createUseCaseButton;
+    }
+
+    public void backToDashboard() {
         getBackButton().click();
     }
-    public void createUseCase(){
+
+    public void createUseCase() {
         getCreateUseCaseButton().click();
     }
-
 
 }

@@ -24,15 +24,15 @@ public class LoginPage {
     @FindBy(xpath = "//button[text()='Submit']")
     private WebElement submitLogin;
 
-    public void clickOnSubmitButton(){
+    public void clickOnSubmitButton() {
         submitLogin.click();
     }
 
-    public void insertUsername(String email){
+    public void insertUsername(String email) {
         emailInputField.sendKeys(email);
     }
 
-    public void insertPassword(String password){
+    public void insertPassword(String password) {
         passwordInputField.sendKeys(password);
     }
 }

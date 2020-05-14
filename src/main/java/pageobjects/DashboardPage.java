@@ -18,10 +18,13 @@ public class DashboardPage {
     @FindBy(xpath = "//h5[text()='Use Cases']")
     private WebElement useCasesCard;
 
-    public void clickOnProfileCard(){
+    public void clickOnProfileCard() {
         profileCard.click();
     }
-    public void clickOnUseCasesCard(){ useCasesCard.click(); }
+
+    public void clickOnUseCasesCard() {
+        useCasesCard.click();
+    }
 
 
 }

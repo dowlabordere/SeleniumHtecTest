@@ -18,11 +18,11 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='http://htecgroup.com']")
     WebElement htecLogo;
 
-    public void clickOnForgotPassword(){
+    public void clickOnForgotPassword() {
         forgotPasswordMiddleButton.click();
     }
 
-    public void clickOnLogin(){
+    public void clickOnLogin() {
         loginMiddleButton.click();
     }
 
